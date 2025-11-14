@@ -40,13 +40,13 @@ const History: React.FC = () => {
         </AnimatedSection>
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 h-full w-0.5 bg-emerald-200 transform -translate-x-1/2"></div>
+          <div className="absolute left-1/2 h-full w-0.5 bg-slate-300 transform -translate-x-1/2"></div>
           
           {historyData.map((item, index) => (
             <AnimatedSection key={index}>
               <div className={`flex items-center w-full mb-8 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                 <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                  <div className={`bg-emerald-50 p-6 rounded-lg shadow-lg ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                  <div className={`bg-slate-100 p-6 rounded-lg shadow-lg ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
                     <div className="text-2xl font-bold text-amber-500 mb-2">{item.year}</div>
                     <h3 className="text-xl font-bold text-gray-800 mb-3">{item.title}</h3>
                     <p className="text-gray-600">{item.description}</p>

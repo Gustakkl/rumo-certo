@@ -36,7 +36,9 @@ const Hero: React.FC<HeroProps> = ({ scrollY }) => {
           Encontre a esperança e o caminho para a recuperação em um ambiente seguro e acolhedor.
         </p>
         <a 
-          href="#contato"
+          href="https://wa.me/5511988104793?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20tratamento."
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-amber-500 text-white font-bold py-3 px-8 rounded-full text-lg uppercase hover:bg-amber-400 hover:scale-105 hover:shadow-2xl transition-all duration-300 ease-in-out animate-pulse"
         >
           Fale Conosco

@@ -105,7 +105,7 @@ const Chatbot: React.FC = () => {
 
   return (
     <>
-      <div className={`fixed bottom-24 right-5 w-80 h-[28rem] bg-emerald-50 rounded-lg shadow-2xl flex flex-col transition-all duration-300 ease-in-out z-50 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+      <div className={`fixed bottom-24 right-5 w-80 h-[28rem] bg-slate-100 rounded-lg shadow-2xl flex flex-col transition-all duration-300 ease-in-out z-50 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
         <div className="bg-white p-3 flex items-center space-x-3 rounded-t-lg shadow-md">
           <img src="https://i.postimg.cc/L85c48tr/mulher-jovem-cabelo-preto-atendente-virtual.jpg" alt="Gabi - Assistente Virtual" className="w-10 h-10 rounded-full border-2 border-amber-400" />
           <div>
@@ -117,7 +117,7 @@ const Chatbot: React.FC = () => {
         <div ref={chatboxRef} className="flex-1 p-4 overflow-y-auto space-y-4">
           {messages.map((msg, index) => (
             <div key={index} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`max-w-[80%] px-3 py-2 rounded-lg shadow whitespace-pre-wrap ${msg.sender === 'user' ? 'bg-amber-500 text-white rounded-br-none' : 'bg-emerald-100 text-gray-800 rounded-bl-none'}`}>
+              <div className={`max-w-[80%] px-3 py-2 rounded-lg shadow whitespace-pre-wrap ${msg.sender === 'user' ? 'bg-amber-500 text-white rounded-br-none' : 'bg-slate-200 text-gray-800 rounded-bl-none'}`}>
                 {msg.text}
               </div>
             </div>
@@ -125,7 +125,7 @@ const Chatbot: React.FC = () => {
           {showSuggestions && (
             <div className="flex flex-col items-start space-y-2 pt-2">
                 {initialSuggestions.map(sugg => (
-                    <button key={sugg} onClick={() => processMessage(sugg)} className="text-sm bg-emerald-100 text-amber-600 px-3 py-1 rounded-full hover:bg-emerald-200 transition-colors disabled:opacity-50" disabled={isLoading}>
+                    <button key={sugg} onClick={() => processMessage(sugg)} className="text-sm bg-slate-200 text-amber-600 px-3 py-1 rounded-full hover:bg-slate-300 transition-colors disabled:opacity-50" disabled={isLoading}>
                         {sugg}
                     </button>
                 ))}
@@ -133,7 +133,7 @@ const Chatbot: React.FC = () => {
           )}
           {isLoading && messages[messages.length - 1]?.sender === 'user' && (
              <div className="flex justify-start">
-                <div className="bg-emerald-100 text-gray-800 rounded-bl-none px-3 py-2 rounded-lg flex items-center space-x-1 shadow">
+                <div className="bg-slate-200 text-gray-800 rounded-bl-none px-3 py-2 rounded-lg flex items-center space-x-1 shadow">
                     <span className="w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-0"></span>
                     <span className="w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-150"></span>
                     <span className="w-2 h-2 bg-gray-400 rounded-full animate-pulse delay-300"></span>
@@ -142,14 +142,14 @@ const Chatbot: React.FC = () => {
           )}
         </div>
 
-        <form onSubmit={handleSendMessage} className="p-3 border-t border-emerald-200">
+        <form onSubmit={handleSendMessage} className="p-3 border-t border-slate-200">
           <div className="flex space-x-2">
             <input 
               type="text" 
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder={isLoading ? "Aguarde a resposta..." : "Digite sua dúvida..."}
-              className="w-full bg-white text-gray-800 rounded-md p-2 border border-emerald-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all text-sm"
+              className="w-full bg-white text-gray-800 rounded-md p-2 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all text-sm"
               disabled={isLoading}
             />
             <button type="submit" className="bg-amber-500 text-white p-2 rounded-md hover:bg-amber-400 transition-colors disabled:bg-amber-700" disabled={isLoading}>

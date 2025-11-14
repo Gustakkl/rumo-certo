@@ -5,7 +5,7 @@ import AnimatedSection from './AnimatedSection';
 
 const About: React.FC = () => {
   return (
-    <section id="sobre" className="py-20 md:py-32 bg-emerald-100">
+    <section id="sobre" className="py-20 md:py-32 bg-slate-200">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-12">

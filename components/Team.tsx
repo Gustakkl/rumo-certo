@@ -52,8 +52,8 @@ const Team: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {teamHighlights.map((highlight, index) => (
             <AnimatedSection key={index}>
-              <div className="bg-emerald-50 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
-                 <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-emerald-100 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
+              <div className="bg-slate-100 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
+                 <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-slate-200 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
                     {highlight.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{highlight.title}</h3>

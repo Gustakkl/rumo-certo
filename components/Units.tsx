@@ -59,7 +59,7 @@ const Units: React.FC = () => {
                
                 <button 
                   onClick={prevImage} 
-                  className="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-emerald-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+                  className="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
                   aria-label="Imagem anterior"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
@@ -67,7 +67,7 @@ const Units: React.FC = () => {
 
                 <button 
                   onClick={nextImage} 
-                  className="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-emerald-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+                  className="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
                   aria-label="Próxima imagem"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>

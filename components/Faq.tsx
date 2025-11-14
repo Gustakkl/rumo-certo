@@ -35,7 +35,7 @@ interface FaqItemProps {
 }
 
 const FaqItem: React.FC<FaqItemProps> = ({ faq, isOpen, onClick }) => (
-    <div className="border-b border-emerald-200 py-4">
+    <div className="border-b border-slate-200 py-4">
         <button
             onClick={onClick}
             className="w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 focus:outline-none group"
@@ -79,7 +79,7 @@ const Faq: React.FC = () => {
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>
-                    <div className="max-w-3xl mx-auto bg-emerald-50 p-6 md:p-8 rounded-lg shadow-2xl">
+                    <div className="max-w-3xl mx-auto bg-slate-100 p-6 md:p-8 rounded-lg shadow-2xl">
                         {faqData.map((faq, index) => (
                             <FaqItem
                                 key={index}

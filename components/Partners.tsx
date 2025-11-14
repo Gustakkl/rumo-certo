@@ -26,7 +26,7 @@ const Partners: React.FC = () => {
   const extendedLogos = [...partnersLogos, ...partnersLogos];
 
   return (
-    <section id="convênios" className="py-20 md:py-32 bg-emerald-100">
+    <section id="convênios" className="py-20 md:py-32 bg-slate-200">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">

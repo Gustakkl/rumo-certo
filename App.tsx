@@ -14,6 +14,7 @@ import Testimonials from './components/Testimonials';
 import Partners from './components/Partners';
 import Blog from './components/Blog';
 import Faq from './components/Faq';
+import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
@@ -46,6 +47,7 @@ const App: React.FC = () => {
         <Testimonials />
         <Blog />
         <Faq />
+        <CallToAction scrollY={scrollY} />
         <Contact />
       </main>
       <Footer />
