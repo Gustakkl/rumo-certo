@@ -35,10 +35,10 @@ interface FaqItemProps {
 }
 
 const FaqItem: React.FC<FaqItemProps> = ({ faq, isOpen, onClick }) => (
-    <div className="border-b border-slate-200 py-4">
+    <div className="border-b border-slate-700/50 py-4">
         <button
             onClick={onClick}
-            className="w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 focus:outline-none group"
+            className="w-full flex justify-between items-center text-left text-lg font-semibold text-slate-200 focus:outline-none group"
         >
             <span className="group-hover:text-amber-500 transition-colors duration-300">{faq.question}</span>
             <svg
@@ -54,7 +54,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ faq, isOpen, onClick }) => (
         <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 mt-4' : 'max-h-0'}`}
         >
-            <p className="text-gray-600 leading-relaxed pr-8">{faq.answer}</p>
+            <p className="text-slate-400 leading-relaxed pr-8">{faq.answer}</p>
         </div>
     </div>
 );
@@ -68,18 +68,18 @@ const Faq: React.FC = () => {
     };
 
     return (
-        <section id="faq" className="py-20 md:py-32 bg-white">
+        <section id="faq" className="py-20 md:py-32 bg-transparent">
             <div className="container mx-auto px-6">
                 <AnimatedSection>
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Perguntas Frequentes</h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-200 mb-4">Perguntas Frequentes</h2>
+                        <p className="text-lg text-slate-400 max-w-2xl mx-auto">
                             Esclareça suas principais dúvidas sobre nossos tratamentos e estrutura.
                         </p>
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>
-                    <div className="max-w-3xl mx-auto bg-slate-100 p-6 md:p-8 rounded-lg shadow-2xl">
+                    <div className="max-w-3xl mx-auto bg-slate-900 border border-slate-700/50 p-6 md:p-8 rounded-lg shadow-2xl">
                         {faqData.map((faq, index) => (
                             <FaqItem
                                 key={index}

@@ -47,12 +47,12 @@ const MentalHealth: React.FC = () => {
   };
 
   return (
-    <section id="saude-mental" className="py-20 md:py-32 bg-white">
+    <section id="saude-mental" className="py-20 md:py-32 bg-transparent">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tratamento de Saúde Mental</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-200 mb-4">Tratamento de Saúde Mental</h2>
+            <p className="text-lg text-slate-400 max-w-3xl mx-auto">
               Um caminho para o equilíbrio e bem-estar, com abordagens modernas e humanizadas para transtornos como ansiedade, depressão e esquizofrenia.
             </p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
@@ -61,7 +61,7 @@ const MentalHealth: React.FC = () => {
 
         <AnimatedSection>
           <div className="relative max-w-4xl mx-auto mb-16">
-            <div className="relative h-96 md:h-[500px] w-full overflow-hidden rounded-lg shadow-xl bg-slate-100">
+            <div className="relative h-96 md:h-[500px] w-full overflow-hidden rounded-lg shadow-xl bg-slate-900">
               {mentalHealthImages.map((src, index) => (
                 <div
                   key={index}
@@ -82,7 +82,7 @@ const MentalHealth: React.FC = () => {
             
             <button 
               onClick={prevImage} 
-              className="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+              className="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 hover:bg-amber-500 text-slate-200 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
               aria-label="Imagem anterior"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
@@ -90,7 +90,7 @@ const MentalHealth: React.FC = () => {
 
             <button 
               onClick={nextImage} 
-              className="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+              className="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 hover:bg-amber-500 text-slate-200 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
               aria-label="Próxima imagem"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -105,12 +105,12 @@ const MentalHealth: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {treatmentModalities.map((modality, index) => (
             <AnimatedSection key={index}>
-              <div className="bg-slate-100 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
-                <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-slate-200 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
+              <div className="bg-slate-900 border border-slate-700/50 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
+                <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-slate-800 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
                   {modality.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{modality.title}</h3>
-                <p className="text-gray-600 flex-grow">{modality.description}</p>
+                <h3 className="text-xl font-bold text-slate-200 mb-3">{modality.title}</h3>
+                <p className="text-slate-400 flex-grow">{modality.description}</p>
               </div>
             </AnimatedSection>
           ))}

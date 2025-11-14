@@ -31,11 +31,11 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="depoimentos" className="py-20 md:py-32 bg-slate-200">
+    <section id="depoimentos" className="py-20 md:py-32 bg-transparent">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Histórias que Inspiram</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-200 mb-4">Histórias que Inspiram</h2>
           </div>
         </AnimatedSection>
         <AnimatedSection>
@@ -50,10 +50,10 @@ const Testimonials: React.FC = () => {
                   }`}
                 >
                   {currentIndex === index && (
-                    <div className="bg-white p-8 rounded-lg shadow-lg text-center flex flex-col items-center">
+                    <div className="bg-slate-800 border border-slate-700/50 p-8 rounded-lg shadow-lg text-center flex flex-col items-center">
                       <img src={testimonial.image} alt={testimonial.name} className="w-24 h-24 rounded-full mb-6 border-4 border-amber-500 object-cover"/>
-                      <p className="text-gray-600 italic mb-6 text-lg min-h-[100px]">"{testimonial.quote}"</p>
-                      <h4 className="font-bold text-gray-800 text-xl">{testimonial.name}</h4>
+                      <p className="text-slate-400 italic mb-6 text-lg min-h-[100px]">"{testimonial.quote}"</p>
+                      <h4 className="font-bold text-slate-200 text-xl">{testimonial.name}</h4>
                     </div>
                   )}
                 </div>
@@ -63,7 +63,7 @@ const Testimonials: React.FC = () => {
             {/* Previous Button */}
             <button 
               onClick={prevTestimonial} 
-              className="absolute top-1/2 left-0 md:-left-20 transform -translate-y-1/2 bg-slate-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+              className="absolute top-1/2 left-0 md:-left-20 transform -translate-y-1/2 bg-slate-800/50 hover:bg-amber-500 text-slate-200 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
               aria-label="Depoimento anterior"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
@@ -72,7 +72,7 @@ const Testimonials: React.FC = () => {
             {/* Next Button */}
             <button 
               onClick={nextTestimonial} 
-              className="absolute top-1/2 right-0 md:-right-20 transform -translate-y-1/2 bg-slate-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+              className="absolute top-1/2 right-0 md:-right-20 transform -translate-y-1/2 bg-slate-800/50 hover:bg-amber-500 text-slate-200 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
               aria-label="Próximo depoimento"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>

@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -18,6 +16,7 @@ import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
+import NeuralNetworkBackground from './components/NeuralNetworkBackground';
 
 const App: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -32,7 +31,8 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-transparent text-gray-700 antialiased relative">
+    <div className="bg-transparent text-slate-300 antialiased relative">
+      <NeuralNetworkBackground />
       <Header />
       <main>
         <Hero scrollY={scrollY} />

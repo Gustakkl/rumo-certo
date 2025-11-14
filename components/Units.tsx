@@ -22,12 +22,12 @@ const Units: React.FC = () => {
   };
   
   return (
-    <section id="unidades" className="py-20 md:py-32 bg-white">
+    <section id="unidades" className="py-20 md:py-32 bg-transparent">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossas Unidades</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-200 mb-4">Nossas Unidades</h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               Ambientes projetados para o conforto, segurança e bem-estar durante a jornada de recuperação.
             </p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
@@ -36,7 +36,7 @@ const Units: React.FC = () => {
         
         <AnimatedSection>
           <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">Unidade Masculina 1</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-slate-200 mb-8 text-center">Unidade Masculina 1</h3>
             <div className="relative max-w-4xl mx-auto">
               <div className="relative h-96 md:h-[500px] w-full overflow-hidden rounded-lg shadow-xl">
                  {maleUnitImages1.map((src, index) => (
@@ -59,7 +59,7 @@ const Units: React.FC = () => {
                
                 <button 
                   onClick={prevImage} 
-                  className="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+                  className="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-slate-800/50 hover:bg-amber-500 text-slate-200 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
                   aria-label="Imagem anterior"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
@@ -67,7 +67,7 @@ const Units: React.FC = () => {
 
                 <button 
                   onClick={nextImage} 
-                  className="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+                  className="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-slate-800/50 hover:bg-amber-500 text-slate-200 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
                   aria-label="Próxima imagem"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -83,7 +83,7 @@ const Units: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-16">
             <AnimatedSection>
               <div className="text-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">Unidade Feminina</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-200 mb-8">Unidade Feminina</h3>
                  <div className="overflow-hidden rounded-lg shadow-xl group">
                     <img 
                         src={femaleUnitImage} 
@@ -95,7 +95,7 @@ const Units: React.FC = () => {
             </AnimatedSection>
             <AnimatedSection>
                 <div className="text-center">
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">Unidade Masculina 3</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-200 mb-8">Unidade Masculina 3</h3>
                     <div className="overflow-hidden rounded-lg shadow-xl group">
                         <img 
                             src={maleUnitImage3} 

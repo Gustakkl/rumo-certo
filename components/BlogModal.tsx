@@ -36,7 +36,7 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, onClose }) => {
       onClick={onClose}
     >
       <div 
-        className="bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col relative animate-[scale-in_0.3s_ease-out_forwards]"
+        className="bg-slate-800 border border-slate-700 rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col relative animate-[scale-in_0.3s_ease-out_forwards]"
         onClick={(e) => e.stopPropagation()}
         style={{ transform: 'scale(0.95)' }}
       >
@@ -52,8 +52,8 @@ const BlogModal: React.FC<BlogModalProps> = ({ post, onClose }) => {
         </div>
         <div className="p-8 overflow-y-auto">
           <p className="text-amber-500 text-sm font-semibold mb-2">{post.category}</p>
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">{post.title}</h2>
-          <div className="text-gray-600 leading-relaxed space-y-4 whitespace-pre-line">
+          <h2 className="text-3xl font-bold text-slate-200 mb-6">{post.title}</h2>
+          <div className="text-slate-400 leading-relaxed space-y-4 whitespace-pre-line">
             {post.fullContent}
           </div>
         </div>

@@ -26,12 +26,12 @@ const Partners: React.FC = () => {
   const extendedLogos = [...partnersLogos, ...partnersLogos];
 
   return (
-    <section id="convênios" className="py-20 md:py-32 bg-slate-200">
+    <section id="convênios" className="py-20 md:py-32 bg-transparent">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Convênios Parceiros</h2>
-            <p className="text-lg text-gray-600">Aceitamos uma ampla variedade de convênios para facilitar seu acesso ao tratamento.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-200 mb-4">Convênios Parceiros</h2>
+            <p className="text-lg text-slate-400">Aceitamos uma ampla variedade de convênios para facilitar seu acesso ao tratamento.</p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
           </div>
         </AnimatedSection>

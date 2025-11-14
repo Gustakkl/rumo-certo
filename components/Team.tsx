@@ -21,12 +21,12 @@ const teamHighlights = [
 
 const Team: React.FC = () => {
   return (
-    <section id="equipe" className="py-20 md:py-32 bg-white">
+    <section id="equipe" className="py-20 md:py-32 bg-transparent">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossa Equipe de Excelência</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-200 mb-4">Nossa Equipe de Excelência</h2>
+            <p className="text-lg text-slate-400 max-w-3xl mx-auto">
               Profissionais dedicados ao tratamento psiquiátrico e da dependência química, proporcionando um atendimento humanizado e de ponta.
             </p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
@@ -39,10 +39,10 @@ const Team: React.FC = () => {
           </AnimatedSection>
           <AnimatedSection>
             <div className="space-y-6">
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-slate-400 leading-relaxed">
                 O Hospital Rumo Certo conta com uma equipe médica altamente qualificada, composta por quatro psiquiatras, além de clínicos gerais, psicólogos e uma equipe multidisciplinar. Trabalhamos de forma integrada para garantir o melhor cuidado para cada paciente.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-slate-400 leading-relaxed">
                 Desde a sua chegada, o paciente é acolhido e passa por uma entrevista individual e exames detalhados. A partir daí, iniciamos um tratamento com orientação médica completa, explicando as regras e o cronograma para uma jornada de recuperação transparente e segura.
                 </p>
             </div>
@@ -52,12 +52,12 @@ const Team: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {teamHighlights.map((highlight, index) => (
             <AnimatedSection key={index}>
-              <div className="bg-slate-100 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
-                 <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-slate-200 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
+              <div className="bg-slate-900 border border-slate-700/50 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
+                 <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-slate-800 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
                     {highlight.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{highlight.title}</h3>
-                <p className="text-gray-600 flex-grow">{highlight.description}</p>
+                <h3 className="text-xl font-bold text-slate-200 mb-3">{highlight.title}</h3>
+                <p className="text-slate-400 flex-grow">{highlight.description}</p>
               </div>
             </AnimatedSection>
           ))}

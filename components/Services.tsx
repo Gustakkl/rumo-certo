@@ -57,12 +57,12 @@ const servicesData: Service[] = [
 
 const Services: React.FC = () => {
   return (
-    <section id="serviços" className="py-20 md:py-32 bg-white">
+    <section id="serviços" className="py-20 md:py-32 bg-transparent">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossos Tratamentos</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-200 mb-4">Nossos Tratamentos</h2>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
               Abordagens especializadas para cada jornada de recuperação, com cuidado, respeito e profissionalismo.
             </p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
@@ -71,13 +71,13 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
             <AnimatedSection key={index}>
-              <div className="bg-slate-100 rounded-lg shadow-xl overflow-hidden h-full flex flex-col group transition-all duration-300 hover:shadow-[0_0_25px_rgba(251,191,36,0.4)] hover:-translate-y-2">
+              <div className="bg-slate-900 rounded-lg shadow-xl overflow-hidden h-full flex flex-col group transition-all duration-300 hover:shadow-[0_0_25px_rgba(251,191,36,0.4)] hover:-translate-y-2 border border-slate-700/50">
                 <div className="overflow-hidden h-48">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6 text-center flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 flex-grow text-sm">{service.description}</p>
+                  <h3 className="text-xl font-bold text-slate-200 mb-3">{service.title}</h3>
+                  <p className="text-slate-400 flex-grow text-sm">{service.description}</p>
                 </div>
               </div>
             </AnimatedSection>
