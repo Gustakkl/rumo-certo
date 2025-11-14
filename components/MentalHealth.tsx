@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AnimatedSection from './AnimatedSection';
 
 const treatmentModalities = [
@@ -24,43 +24,97 @@ const treatmentModalities = [
   }
 ];
 
+const mentalHealthImages = [
+  "https://i.postimg.cc/d1dxPgc9/1.jpg",
+  "https://i.postimg.cc/JnJ2VSCp/2.jpg",
+  "https://i.postimg.cc/RFfD52xP/3.jpg",
+  "https://i.postimg.cc/mDM5fKW6/4.jpg",
+  "https://i.postimg.cc/pT86b3MS/5.jpg",
+  "https://i.postimg.cc/mks6bVTn/6.jpg",
+  "https://i.postimg.cc/6qX19zBb/7.jpg",
+  "https://i.postimg.cc/Bb0wqNq0/8.jpg"
+];
+
 const MentalHealth: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + mentalHealthImages.length) % mentalHealthImages.length);
+  };
+
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % mentalHealthImages.length);
+  };
+
   return (
-    <section id="saude-mental" className="py-20 md:py-32 bg-teal-950">
+    <section id="saude-mental" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Tratamento de Saúde Mental</h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tratamento de Saúde Mental</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Um caminho para o equilíbrio e bem-estar, com abordagens modernas e humanizadas para transtornos como ansiedade, depressão e esquizofrenia.
             </p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
           </div>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <AnimatedSection>
+          <div className="relative max-w-4xl mx-auto mb-16">
+            <div className="relative h-96 md:h-[500px] w-full overflow-hidden rounded-lg shadow-xl bg-emerald-50">
+              {mentalHealthImages.map((src, index) => (
+                <div
+                  key={index}
+                  className={`absolute w-full h-full transition-opacity duration-700 ease-in-out ${
+                    currentIndex === index ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  {currentIndex === index && (
+                    <img 
+                      src={src} 
+                      alt={`Tratamento de Saúde Mental - Imagem ${index + 1}`} 
+                      className="w-full h-full object-contain"
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+            
+            <button 
+              onClick={prevImage} 
+              className="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-emerald-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+              aria-label="Imagem anterior"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            </button>
+
+            <button 
+              onClick={nextImage} 
+              className="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-emerald-200/50 hover:bg-amber-500 text-gray-800 hover:text-white rounded-full p-3 transition-all duration-300 z-10 active:scale-90"
+              aria-label="Próxima imagem"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </button>
+
+            <div className="absolute bottom-4 right-4 bg-black/50 text-white text-sm px-3 py-1 rounded-full">
+              {currentIndex + 1} / {mentalHealthImages.length}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {treatmentModalities.map((modality, index) => (
             <AnimatedSection key={index}>
-              <div className="bg-teal-900 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
-                <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-teal-800 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
+              <div className="bg-emerald-50 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
+                <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-emerald-100 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
                   {modality.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{modality.title}</h3>
-                <p className="text-gray-400 flex-grow">{modality.description}</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{modality.title}</h3>
+                <p className="text-gray-600 flex-grow">{modality.description}</p>
               </div>
             </AnimatedSection>
           ))}
         </div>
-
-        <AnimatedSection>
-            <div className="bg-teal-900 p-8 md:p-12 rounded-lg shadow-2xl text-center">
-                <h3 className="text-2xl font-bold text-white mb-4">Suporte Contínuo e Estrutura Completa</h3>
-                <p className="text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                No Hospital Rumo Certo, oferecemos uma estrutura completa e humanizada, focada no atendimento integral do paciente. Nossa abordagem multidisciplinar, com profissionais experientes disponíveis 24 horas por dia, garante o suporte necessário em cada fase do tratamento, promovendo uma recuperação total e eficaz.
-                </p>
-            </div>
-        </AnimatedSection>
-
       </div>
     </section>
   );

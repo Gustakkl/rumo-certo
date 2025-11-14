@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import History from './components/History';
 import Services from './components/Services';
 import Upti from './components/Upti';
 import MentalHealth from './components/MentalHealth';
@@ -30,12 +31,13 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-transparent text-gray-200 antialiased relative z-10">
+    <div className="bg-transparent text-gray-700 antialiased relative">
       <Header />
       <main>
         <Hero scrollY={scrollY} />
         <Partners />
         <About />
+        <History />
         <Services />
         <Upti />
         <MentalHealth />

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const navLinks = [
   { name: 'Início', href: '#início' },
   { name: 'Sobre', href: '#sobre' },
+  { name: 'História', href: '#historia' },
   { name: 'Serviços', href: '#serviços' },
   { name: 'UPTI', href: '#upti' },
   { name: 'Saúde Mental', href: '#saude-mental' },
@@ -58,11 +59,11 @@ const Header: React.FC = () => {
       href={href}
       onClick={() => isMobile && setIsOpen(false)}
       className={`relative group transition-colors duration-300
-        ${activeSection === href.substring(1) ? 'text-amber-400' : 'text-gray-200 hover:text-amber-400'}
+        ${activeSection === href.substring(1) ? 'text-amber-500' : 'text-gray-700 hover:text-amber-500'}
         ${isMobile ? 'block py-3 text-lg' : ''}`}
     >
       {name}
-      <span className={`absolute bottom-0 left-0 h-0.5 bg-amber-400 transition-all duration-300 
+      <span className={`absolute bottom-0 left-0 h-0.5 bg-amber-500 transition-all duration-300 
         ${activeSection === href.substring(1) ? 'w-full' : 'w-0 group-hover:w-full'}`}>
       </span>
     </a>
@@ -70,7 +71,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isOpen ? 'bg-teal-950/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isOpen ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           <a href="#início" onClick={() => setIsOpen(false)}>
             <img src="https://i.postimg.cc/HW6c2LrS/Design-sem-nome.gif" alt="Hospital Rumo Certo Logo" className="h-16 w-16 rounded-full object-cover" />
@@ -81,7 +82,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <button
-            className="lg:hidden text-white z-50"
+            className="lg:hidden text-gray-800 z-50"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -94,7 +95,7 @@ const Header: React.FC = () => {
         </div>
       </header>
       
-      <div className={`fixed inset-0 bg-teal-950/95 backdrop-blur-sm z-40 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out lg:hidden`}>
+      <div className={`fixed inset-0 bg-white/95 backdrop-blur-sm z-40 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out lg:hidden`}>
         <nav className="flex flex-col items-center justify-center h-full space-y-6">
           {navLinks.map((link) => (
             <NavLink key={link.name} name={link.name} href={link.href} isMobile />

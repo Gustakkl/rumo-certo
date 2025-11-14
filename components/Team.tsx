@@ -3,7 +3,7 @@ import AnimatedSection from './AnimatedSection';
 
 const teamHighlights = [
   {
-    icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.122-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653-.122-1.28-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
+    icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.122-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.122-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
     title: "Corpo Clínico Especializado",
     description: "Quatro psiquiatras, clínicos gerais e psicólogos trabalhando de forma integrada para o seu bem-estar."
   },
@@ -21,12 +21,12 @@ const teamHighlights = [
 
 const Team: React.FC = () => {
   return (
-    <section id="equipe" className="py-20 md:py-32 bg-teal-950">
+    <section id="equipe" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Nossa Equipe de Excelência</h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossa Equipe de Excelência</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Profissionais dedicados ao tratamento psiquiátrico e da dependência química, proporcionando um atendimento humanizado e de ponta.
             </p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
@@ -35,14 +35,14 @@ const Team: React.FC = () => {
         
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <AnimatedSection>
-            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop" alt="Equipe Médica" className="rounded-lg shadow-2xl w-full h-full object-cover" />
+            <img src="https://i.postimg.cc/cJ6bLrwc/esquipe-medica-uniformaizada-com-essa-logo.jpg" alt="Equipe Médica" className="rounded-lg shadow-2xl w-full h-full object-cover" />
           </AnimatedSection>
           <AnimatedSection>
             <div className="space-y-6">
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed">
                 O Hospital Rumo Certo conta com uma equipe médica altamente qualificada, composta por quatro psiquiatras, além de clínicos gerais, psicólogos e uma equipe multidisciplinar. Trabalhamos de forma integrada para garantir o melhor cuidado para cada paciente.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed">
                 Desde a sua chegada, o paciente é acolhido e passa por uma entrevista individual e exames detalhados. A partir daí, iniciamos um tratamento com orientação médica completa, explicando as regras e o cronograma para uma jornada de recuperação transparente e segura.
                 </p>
             </div>
@@ -52,12 +52,12 @@ const Team: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           {teamHighlights.map((highlight, index) => (
             <AnimatedSection key={index}>
-              <div className="bg-teal-900 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
-                 <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-teal-800 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
+              <div className="bg-emerald-50 p-8 rounded-lg shadow-xl text-center h-full flex flex-col items-center justify-start transform hover:-translate-y-2 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
+                 <div className="mb-6 flex justify-center items-center h-16 w-16 mx-auto bg-emerald-100 rounded-full group-hover:bg-amber-500 transition-colors duration-300">
                     {highlight.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{highlight.title}</h3>
-                <p className="text-gray-400 flex-grow">{highlight.description}</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{highlight.title}</h3>
+                <p className="text-gray-600 flex-grow">{highlight.description}</p>
               </div>
             </AnimatedSection>
           ))}

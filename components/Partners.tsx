@@ -26,12 +26,12 @@ const Partners: React.FC = () => {
   const extendedLogos = [...partnersLogos, ...partnersLogos];
 
   return (
-    <section id="convênios" className="py-20 md:py-32 bg-teal-900">
+    <section id="convênios" className="py-20 md:py-32 bg-emerald-100">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Convênios Parceiros</h2>
-            <p className="text-lg text-gray-400">Aceitamos uma ampla variedade de convênios para facilitar seu acesso ao tratamento.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Convênios Parceiros</h2>
+            <p className="text-lg text-gray-600">Aceitamos uma ampla variedade de convênios para facilitar seu acesso ao tratamento.</p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
           </div>
         </AnimatedSection>
@@ -46,7 +46,7 @@ const Partners: React.FC = () => {
                   <img
                     src={partner.url}
                     alt={partner.name}
-                    className="h-12 object-contain transition-all duration-300 ease-in-out mix-blend-multiply group-hover:mix-blend-normal group-hover:scale-110 group-hover:-translate-y-1 group-hover:drop-shadow-[0_5px_15px_rgba(251,191,36,0.4)]"
+                    className="h-12 object-contain transition-all duration-300 ease-in-out grayscale group-hover:grayscale-0 group-hover:scale-110 group-hover:-translate-y-1 group-hover:drop-shadow-[0_5px_15px_rgba(251,191,36,0.4)]"
                     title={partner.name}
                   />
                 </div>

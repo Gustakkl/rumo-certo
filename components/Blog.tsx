@@ -60,12 +60,12 @@ const Blog: React.FC = () => {
 
   return (
     <>
-      <section id="blog" className="py-20 md:py-32 bg-teal-900">
+      <section id="blog" className="py-20 md:py-32 bg-emerald-100">
         <div className="container mx-auto px-6">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Nosso Blog</h2>
-              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nosso Blog</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Artigos, dicas e informações para apoiar sua jornada de bem-estar e recuperação.
               </p>
             </div>
@@ -73,17 +73,17 @@ const Blog: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {blogPosts.map((post, index) => (
               <AnimatedSection key={index}>
-                <div className="bg-teal-950 rounded-lg shadow-xl overflow-hidden h-full flex flex-col group transition-all duration-300 hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
+                <div className="bg-white rounded-lg shadow-xl overflow-hidden h-full flex flex-col group transition-all duration-300 hover:shadow-[0_0_25px_rgba(251,191,36,0.4)]">
                   <div className="overflow-hidden">
                     <img src={post.image} alt={post.title} className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <p className="text-amber-400 text-sm font-semibold mb-2">{post.category}</p>
-                    <h3 className="text-xl font-bold text-white mb-3 flex-grow">{post.title}</h3>
-                    <p className="text-gray-400 mb-4 text-sm">{post.excerpt}</p>
+                    <p className="text-amber-500 text-sm font-semibold mb-2">{post.category}</p>
+                    <h3 className="text-xl font-bold text-gray-800 mb-3 flex-grow">{post.title}</h3>
+                    <p className="text-gray-600 mb-4 text-sm">{post.excerpt}</p>
                     <button 
                       onClick={() => setSelectedPost(post)}
-                      className="mt-auto text-amber-500 font-semibold hover:text-amber-400 transition-colors duration-300 self-start"
+                      className="mt-auto text-amber-600 font-semibold hover:text-amber-500 transition-colors duration-300 self-start"
                     >
                       Leia Mais &rarr;
                     </button>

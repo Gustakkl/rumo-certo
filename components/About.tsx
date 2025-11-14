@@ -5,11 +5,11 @@ import AnimatedSection from './AnimatedSection';
 
 const About: React.FC = () => {
   return (
-    <section id="sobre" className="py-20 md:py-32 bg-teal-900">
+    <section id="sobre" className="py-20 md:py-32 bg-emerald-100">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Nossa Missão é a Sua Recuperação</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossa Missão é a Sua Recuperação</h2>
             <div className="w-24 h-1 bg-amber-500 mx-auto"></div>
           </div>
         </AnimatedSection>
@@ -28,10 +28,10 @@ const About: React.FC = () => {
           </AnimatedSection>
           <AnimatedSection>
             <div className="space-y-6">
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 No Hospital Rumo Certo, acreditamos que toda jornada de recuperação é única. Oferecemos um tratamento humanizado e individualizado, focado não apenas na desintoxicação, mas na reconstrução de vidas, laços familiares e sonhos.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Nossa equipe multidisciplinar de médicos, psicólogos e terapeutas está dedicada a fornecer o mais alto padrão de cuidado em um ambiente que promove paz, reflexão e crescimento pessoal.
               </p>
             </div>

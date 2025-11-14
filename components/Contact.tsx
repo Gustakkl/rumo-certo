@@ -56,35 +56,35 @@ Olá! Gostaria de mais informações sobre o tratamento.
   };
 
   return (
-    <section id="contato" className="py-20 md:py-32 bg-teal-950">
+    <section id="contato" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Dê o Primeiro Passo</h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dê o Primeiro Passo</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Preencha o formulário e nossa equipe entrará em contato. A avaliação é confidencial e sem compromisso.
             </p>
           </div>
         </AnimatedSection>
         <AnimatedSection>
-          <div className="max-w-3xl mx-auto bg-teal-900 p-8 md:p-12 rounded-lg shadow-2xl">
+          <div className="max-w-3xl mx-auto bg-emerald-50 p-8 md:p-12 rounded-lg shadow-2xl">
             <form onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label htmlFor="patientName" className="block text-gray-300 mb-2">Nome do Paciente</label>
-                  <input type="text" id="patientName" name="patientName" value={formData.patientName} onChange={handleChange} className="w-full bg-teal-800 text-white rounded-md p-3 border border-teal-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all" required />
+                  <label htmlFor="patientName" className="block text-gray-700 mb-2">Nome do Paciente</label>
+                  <input type="text" id="patientName" name="patientName" value={formData.patientName} onChange={handleChange} className="w-full bg-white text-gray-800 rounded-md p-3 border border-emerald-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all" required />
                 </div>
                  <div>
-                  <label htmlFor="contactName" className="block text-gray-300 mb-2">Seu Nome</label>
-                  <input type="text" id="contactName" name="contactName" value={formData.contactName} onChange={handleChange} className="w-full bg-teal-800 text-white rounded-md p-3 border border-teal-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all" required />
+                  <label htmlFor="contactName" className="block text-gray-700 mb-2">Seu Nome</label>
+                  <input type="text" id="contactName" name="contactName" value={formData.contactName} onChange={handleChange} className="w-full bg-white text-gray-800 rounded-md p-3 border border-emerald-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all" required />
                 </div>
                 <div>
-                  <label htmlFor="contactPhone" className="block text-gray-300 mb-2">Seu Telefone/WhatsApp</label>
-                  <input type="tel" id="contactPhone" name="contactPhone" value={formData.contactPhone} onChange={handleChange} className="w-full bg-teal-800 text-white rounded-md p-3 border border-teal-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all" required />
+                  <label htmlFor="contactPhone" className="block text-gray-700 mb-2">Seu Telefone/WhatsApp</label>
+                  <input type="tel" id="contactPhone" name="contactPhone" value={formData.contactPhone} onChange={handleChange} className="w-full bg-white text-gray-800 rounded-md p-3 border border-emerald-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all" required />
                 </div>
                 <div>
-                  <label htmlFor="relationship" className="block text-gray-300 mb-2">Sua relação com o paciente</label>
-                  <select id="relationship" name="relationship" value={formData.relationship} onChange={handleChange} className="w-full bg-teal-800 text-white rounded-md p-3 border border-teal-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all">
+                  <label htmlFor="relationship" className="block text-gray-700 mb-2">Sua relação com o paciente</label>
+                  <select id="relationship" name="relationship" value={formData.relationship} onChange={handleChange} className="w-full bg-white text-gray-800 rounded-md p-3 border border-emerald-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all">
                     <option>O próprio paciente</option>
                     <option>Familiar (Mãe/Pai)</option>
                     <option>Familiar (Cônjuge)</option>
@@ -95,21 +95,21 @@ Olá! Gostaria de mais informações sobre o tratamento.
                 </div>
               </div>
               <div className="mb-6">
-                <label htmlFor="treatmentType" className="block text-gray-300 mb-2">Tipo de Tratamento de Interesse</label>
-                <select id="treatmentType" name="treatmentType" value={formData.treatmentType} onChange={handleChange} className="w-full bg-teal-800 text-white rounded-md p-3 border border-teal-700 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all">
+                <label htmlFor="treatmentType" className="block text-gray-700 mb-2">Tipo de Tratamento de Interesse</label>
+                <select id="treatmentType" name="treatmentType" value={formData.treatmentType} onChange={handleChange} className="w-full bg-white text-gray-800 rounded-md p-3 border border-emerald-300 focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all">
                   {treatmentOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
                 </select>
               </div>
                <div className="mb-8">
-                <label className="block text-gray-300 mb-3">Tipo de Internação</label>
+                <label className="block text-gray-700 mb-3">Tipo de Internação</label>
                 <div className="flex flex-col md:flex-row gap-6">
-                    <label className="flex items-center space-x-3 p-3 bg-teal-800 rounded-md flex-1 cursor-pointer hover:bg-teal-700 transition-colors">
-                        <input type="radio" name="internmentType" value="Voluntária" checked={formData.internmentType === 'Voluntária'} onChange={handleChange} className="h-5 w-5 text-amber-500 bg-teal-700 border-teal-600 focus:ring-amber-500" />
-                        <span className="text-white">Voluntária</span>
+                    <label className="flex items-center space-x-3 p-3 bg-white rounded-md flex-1 cursor-pointer hover:bg-emerald-100 transition-colors">
+                        <input type="radio" name="internmentType" value="Voluntária" checked={formData.internmentType === 'Voluntária'} onChange={handleChange} className="h-5 w-5 text-amber-500 bg-emerald-200 border-emerald-300 focus:ring-amber-500" />
+                        <span className="text-gray-800">Voluntária</span>
                     </label>
-                    <label className="flex items-center space-x-3 p-3 bg-teal-800 rounded-md flex-1 cursor-pointer hover:bg-teal-700 transition-colors">
-                        <input type="radio" name="internmentType" value="Involuntária" checked={formData.internmentType === 'Involuntária'} onChange={handleChange} className="h-5 w-5 text-amber-500 bg-teal-700 border-teal-600 focus:ring-amber-500" />
-                        <span className="text-white">Involuntária</span>
+                    <label className="flex items-center space-x-3 p-3 bg-white rounded-md flex-1 cursor-pointer hover:bg-emerald-100 transition-colors">
+                        <input type="radio" name="internmentType" value="Involuntária" checked={formData.internmentType === 'Involuntária'} onChange={handleChange} className="h-5 w-5 text-amber-500 bg-emerald-200 border-emerald-300 focus:ring-amber-500" />
+                        <span className="text-gray-800">Involuntária</span>
                     </label>
                 </div>
               </div>

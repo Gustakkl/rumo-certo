@@ -35,14 +35,14 @@ interface FaqItemProps {
 }
 
 const FaqItem: React.FC<FaqItemProps> = ({ faq, isOpen, onClick }) => (
-    <div className="border-b border-teal-800 py-4">
+    <div className="border-b border-emerald-200 py-4">
         <button
             onClick={onClick}
-            className="w-full flex justify-between items-center text-left text-lg font-semibold text-white focus:outline-none group"
+            className="w-full flex justify-between items-center text-left text-lg font-semibold text-gray-800 focus:outline-none group"
         >
-            <span className="group-hover:text-amber-400 transition-colors duration-300">{faq.question}</span>
+            <span className="group-hover:text-amber-500 transition-colors duration-300">{faq.question}</span>
             <svg
-                className={`w-6 h-6 transform transition-transform duration-300 text-amber-400 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+                className={`w-6 h-6 transform transition-transform duration-300 text-amber-500 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -54,7 +54,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ faq, isOpen, onClick }) => (
         <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 mt-4' : 'max-h-0'}`}
         >
-            <p className="text-gray-300 leading-relaxed pr-8">{faq.answer}</p>
+            <p className="text-gray-600 leading-relaxed pr-8">{faq.answer}</p>
         </div>
     </div>
 );
@@ -68,18 +68,18 @@ const Faq: React.FC = () => {
     };
 
     return (
-        <section id="faq" className="py-20 md:py-32 bg-teal-950">
+        <section id="faq" className="py-20 md:py-32 bg-white">
             <div className="container mx-auto px-6">
                 <AnimatedSection>
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Perguntas Frequentes</h2>
-                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Perguntas Frequentes</h2>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                             Esclareça suas principais dúvidas sobre nossos tratamentos e estrutura.
                         </p>
                     </div>
                 </AnimatedSection>
                 <AnimatedSection>
-                    <div className="max-w-3xl mx-auto bg-teal-900 p-6 md:p-8 rounded-lg shadow-2xl">
+                    <div className="max-w-3xl mx-auto bg-emerald-50 p-6 md:p-8 rounded-lg shadow-2xl">
                         {faqData.map((faq, index) => (
                             <FaqItem
                                 key={index}

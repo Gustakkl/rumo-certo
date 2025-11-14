@@ -14,7 +14,7 @@
       }
       body {
         font-family: 'Poppins', sans-serif;
-        background: #042f2e; /* Dark grayish-green */
+        background: #ecfdf5; /* emerald-50 */
         overflow-x: hidden;
         opacity: 0;
         animation: body-fade-in 1s forwards;
@@ -28,7 +28,7 @@
         width: 10px;
       }
       ::-webkit-scrollbar-track {
-        background: #134e4a; /* teal-900 */
+        background: #a7f3d0; /* emerald-200 */
       }
       ::-webkit-scrollbar-thumb {
         background: #f59e0b; /* amber-500 */
@@ -41,39 +41,6 @@
       @keyframes scroll {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
-      }
-      
-      /* Animated Star Background */
-      @keyframes move-stars {
-        from { transform: translate(0, 0); }
-        to   { transform: translate(-200px, -2000px); }
-      }
-
-      .stars, .stars2, .stars3 {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 120%; /* Added width to accommodate horizontal movement */
-        height: 100%;
-        display: block;
-        z-index: 0;
-      }
-
-      .stars {
-        background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000"><circle cx="100" cy="100" r="1.5" fill="white"/><circle cx="300" cy="400" r="1" fill="white"/><circle cx="600" cy="200" r="1.2" fill="white"/><circle cx="900" cy="500" r="0.8" fill="white"/><circle cx="1200" cy="300" r="1.7" fill="white"/><circle cx="1500" cy="100" r="1" fill="white"/><circle cx="1800" cy="400" r="1.3" fill="white"/><circle cx="500" cy="800" r="1.1" fill="white"/><circle cx="800" cy="1100" r="0.9" fill="white"/><circle cx="1100" cy="900" r="1.4" fill="white"/><circle cx="1400" cy="1200" r="1" fill="white"/><circle cx="1700" cy="1000" r="1.6" fill="white"/><circle cx="200" cy="1400" r="0.8" fill="white"/><circle cx="700" cy="1500" r="1.2" fill="white"/><circle cx="1300" cy="1600" r="1.3" fill="white"/><circle cx="1900" cy="1300" r="1" fill="white"/><circle cx="400" cy="1800" r="1.5" fill="white"/><circle cx="1000" cy="1900" r="1.1" fill="white"/><circle cx="1600" cy="1700" r="0.9" fill="white"/></svg>') repeat;
-        animation: move-stars 80s linear infinite; /* Faster for closer stars */
-      }
-
-      .stars2 {
-        background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000"><circle cx="150" cy="250" r="1" fill="white"/><circle cx="450" cy="550" r="0.7" fill="white"/><circle cx="750" cy="350" r="0.9" fill="white"/><circle cx="1050" cy="650" r="0.6" fill="white"/><circle cx="1350" cy="450" r="1.1" fill="white"/><circle cx="1650" cy="250" r="0.8" fill="white"/><circle cx="1950" cy="550" r="1" fill="white"/><circle cx="650" cy="950" r="0.8" fill="white"/><circle cx="950" cy="1250" r="0.7" fill="white"/><circle cx="1250" cy="1050" r="1" fill="white"/><circle cx="1550" cy="1350" r="0.7" fill="white"/><circle cx="1850" cy="1150" r="1.2" fill="white"/><circle cx="350" cy="1550" r="0.6" fill="white"/><circle cx="850" cy="1650" r="0.9" fill="white"/><circle cx="1450" cy="1750" r="1" fill="white"/><circle cx="550" cy="1950" r="1.1" fill="white"/></svg>') repeat;
-        animation: move-stars 120s linear infinite; /* Medium speed */
-      }
-      
-      .stars3 {
-        background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000"><circle cx="200" cy="300" r="0.8" fill="white"/><circle cx="500" cy="600" r="0.5" fill="white"/><circle cx="800" cy="400" r="0.7" fill="white"/><circle cx="1100" cy="700" r="0.4" fill="white"/><circle cx="1400" cy="500" r="0.9" fill="white"/><circle cx="1700" cy="300" r="0.6" fill="white"/><circle cx="2000" cy="600" r="0.8" fill="white"/><circle cx="700" cy="1000" r="0.6" fill="white"/><circle cx="1000" cy="1300" r="0.5" fill="white"/><circle cx="1300" cy="1100" r="0.8" fill="white"/><circle cx="1600" cy="1400" r="0.5" fill="white"/><circle cx="1900" cy="1200" r="1" fill="white"/><circle cx="400" cy="1600" r="0.4" fill="white"/><circle cx="900" cy="1700" r="0.7" fill="white"/><circle cx="1500" cy="1800" r="0.8" fill="white"/><circle cx="600" cy="2000" r="0.9" fill="white"/></svg>') repeat;
-        animation: move-stars 180s linear infinite; /* Slower for distant stars */
       }
     </style>
   <script type="importmap">
@@ -88,9 +55,6 @@
 </script>
 </head>
   <body>
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

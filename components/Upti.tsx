@@ -28,12 +28,12 @@ const uptiFeatures = [
 
 const Upti: React.FC = () => {
   return (
-    <section id="upti" className="py-20 md:py-32 bg-teal-900">
+    <section id="upti" className="py-20 md:py-32 bg-emerald-100">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">UPTI - Cuidado Intensivo e Especializado</h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">UPTI - Cuidado Intensivo e Especializado</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             A Unidade Psiquiátrica de Tratamento Intensivo (UPTI) é dedicada ao cuidado de pacientes em crises agudas, oferecendo monitoramento contínuo e um ambiente seguro para estabilização e recuperação.
             </p>
             <div className="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
@@ -48,12 +48,12 @@ const Upti: React.FC = () => {
                 {uptiFeatures.map((feature, index) => (
                     <AnimatedSection key={index}>
                     <div className="flex items-start space-x-6">
-                        <div className="flex-shrink-0 bg-teal-950 p-4 rounded-full shadow-md">
+                        <div className="flex-shrink-0 bg-white p-4 rounded-full shadow-md">
                             {feature.icon}
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                            <p className="text-gray-400">{feature.description}</p>
+                            <h3 className="text-xl font-bold text-gray-800 mb-2">{feature.title}</h3>
+                            <p className="text-gray-600">{feature.description}</p>
                         </div>
                     </div>
                     </AnimatedSection>
